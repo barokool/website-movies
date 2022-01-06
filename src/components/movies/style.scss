@@ -1,0 +1,22 @@
+.movies-container { 
+    gap: 80px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+        font-size: 30px;
+        color:#fff;
+        text-transform: uppercase;
+        padding:0.5rem;
+    }
+    padding: 2rem;
+        &-image { 
+            width: 200px;
+            height:250px;
+            object-fit: cover;
+        }
+}
+
+  
+  .slick-slide img {
+}
+  

@@ -1,0 +1,50 @@
+.navbar {
+  background-color: black;
+  .container-navbar {
+    display: flex;
+    margin: 0 2rem;
+    width: 100%;
+    height: 50px;
+    &-logo {
+      flex: 1;
+      display: flex;
+      align-items: center;
+       h1 {
+        font-size: 30px;
+        color: #4dbf00;
+      }
+    }
+
+    &-link {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      &-links {
+          gap: 20px;
+          display: flex;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+    &-user {
+      flex: 1;
+      align-items: center;
+      display: flex;
+      &-info { 
+          display:flex;
+          color:#fff;
+          align-items: center;
+          gap:20px;
+          img { 
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+      }
+      
+    }
+  }
+}
