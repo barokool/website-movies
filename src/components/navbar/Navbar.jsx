@@ -1,12 +1,20 @@
-import React from "react";
-import AVT from '../../images/profile.jpg'
-import './style.css'
+import React, { useEffect, useRef, useState } from "react";
+import { useDetectOutsideClick } from "../../hooks/useVisible";
+import AVT from "../../images/profile.jpg";
+import "./style.scss";
 export default function Navbar() {
+  const dropdownRef = useRef(null);
+  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+
+  const handleClick = () => { 
+    setIsActive(!isActive)
+  }
+  
   return (
     <div className="navbar">
       <div className="container-navbar">
         <div className="container-navbar-logo">
-          <h1>flakes</h1>
+          <a href="/">flakes</a>
         </div>
         <div className="container-navbar-link">
           <div className="container-navbar-link-links">
@@ -20,8 +28,16 @@ export default function Navbar() {
         <div className="container-navbar-user">
           <div className="container-navbar-user-info">
             <img width={60} src={AVT} alt="avt" />
-            <div>
-              <span>Profile</span>
+            <div className="navbar-profile">
+              <span onClick={handleClick}>Profile</span>
+                <div className={isActive ? "navbar-profile-list" : "unactive"} ref={dropdownRef}>
+                  <li>
+                    <a href="#">Setting</a>
+                  </li>
+                  <li>
+                    <a href="#">Logout</a>
+                  </li>
+                </div>
             </div>
           </div>
         </div>
@@ -29,4 +45,3 @@ export default function Navbar() {
     </div>
   );
 }
-  

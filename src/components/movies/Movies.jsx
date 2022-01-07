@@ -34,7 +34,7 @@ export default function Movies() {
         </Slider>
       </div>
       <div>
-      <h1>New releases</h1>
+      <h1>Top trending</h1>
         <Slider {...settings}>
           {movieList2.map((item, index) => (
             <img
