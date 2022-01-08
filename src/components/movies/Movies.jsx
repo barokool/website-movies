@@ -6,8 +6,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-import styles from "./style.module.scss";
-
 export default function Movies() {
   const settings = {
     dots: false,
